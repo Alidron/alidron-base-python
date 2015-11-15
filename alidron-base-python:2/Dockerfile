@@ -5,8 +5,10 @@ MAINTAINER Axel Voitier <axel.voitier@gmail.com>
 # Debian removed SSLv3, and gevent need to be updated to version 1.0.2 to have
 # monkey.patch_all() working. At time of writting, 1.0.2 was not officially
 # released but only available in a github branch.
-RUN pip install cython
-RUN pip install https://github.com/gevent/gevent/archive/1.0.2.zip
+#RUN pip install cython
+#RUN pip install https://github.com/gevent/gevent/archive/1.0.2.zip
+
+RUN pip install gevent
 RUN pip install pyzmq pebble ipaddress
 RUN pip install https://github.com/zeromq/pyre/archive/master.zip
 RUN pip install eventlet
