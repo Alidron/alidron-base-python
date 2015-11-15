@@ -1,0 +1,11 @@
+stages:
+    - build
+    - deploy
+    
+build-python-2:
+    stage: build
+    tags:
+        - x86
+    script:
+        - cd alidron-base-python:2
+        - make build

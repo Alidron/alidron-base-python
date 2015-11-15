@@ -1,4 +1,5 @@
 image_name = alidron/alidron-base-python:2
+registry = neuron.local:6667
 
 .PHONY: clean clean-dangling build run-bash
 
@@ -9,7 +10,15 @@ clean-dangling:
 	docker rmi $(docker images -q -f dangling=true) || true
 
 build: clean-dangling
-	docker build --force-rm=true -t $(image_name) .
+	docker build --force-rm=true --pull=true -t $(image_name) .
+
+push:
+	docker tag -f $(image_name) $(registry)/$(image_name)
+	docker push $(registry)/$(image_name)
+
+pull:
+	docker pull $(registry)/$(image_name)
+	docker tag $(registry)/$(image_name) $(image_name)
 
 run-bash:
 	docker run -it --rm $(image_name) bash
