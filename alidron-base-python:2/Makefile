@@ -1,5 +1,6 @@
 image_name = alidron/alidron-base-python:2
-registry = neuron.local:6667
+#registry = neuron.local:6667
+registry = registry.tinigrifi.org:5000
 
 .PHONY: clean clean-dangling build run-bash
 
