@@ -14,6 +14,8 @@ RUN pip install https://github.com/zeromq/pyre/archive/master.zip
 RUN pip install eventlet
 RUN pip install https://github.com/aglyzov/netcall/archive/master.zip
 
+RUN pip install pytest
+
 #COPY alidron-isac /usr/src/alidron-isac
 
 ENV PYTHONPATH=/usr/src/alidron-isac
