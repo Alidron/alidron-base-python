@@ -10,10 +10,10 @@ clean-dangling:
 	docker rmi $(docker images -q -f dangling=true) || true
 
 build: clean-dangling
-	docker build --force-rm=true -t $(image_name) .
-	docker tag -f $(image_name) $(registry)/$(image_name)
+	docker build --force-rm=true --pull=true -t $(image_name) .
 
 push:
+	docker tag -f $(image_name) $(registry)/$(image_name)
 	docker push $(registry)/$(image_name)
 
 pull:
