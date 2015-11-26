@@ -5,7 +5,8 @@ RUN apt-get update && apt-get install -y build-essential
 
 RUN pip install gevent
 RUN pip install pyzmq pebble ipaddress
-RUN pip install https://github.com/zeromq/pyre/archive/master.zip
+#RUN pip install https://github.com/zeromq/pyre/archive/master.zip
+RUN pip install https://git.tinigrifi.org/alidron/pyre/repository/archive.zip
 RUN pip install eventlet
 RUN pip install https://github.com/aglyzov/netcall/archive/master.zip
 
