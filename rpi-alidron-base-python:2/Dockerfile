@@ -27,6 +27,8 @@ RUN pip install https://git.tinigrifi.org/alidron/pyre/repository/archive.zip
 RUN pip install eventlet
 RUN pip install https://github.com/aglyzov/netcall/archive/master.zip
 
+RUN pip install pytest pytest-cov
+
 #COPY alidron-isac /usr/src/alidron-isac
 ENV PYTHONPATH=/usr/src/alidron-isac
 
