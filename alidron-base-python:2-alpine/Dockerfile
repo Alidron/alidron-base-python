@@ -15,8 +15,8 @@
 # You should have received a copy of the GNU Lesser General Public License
 # along with Alidron.  If not, see <http://www.gnu.org/licenses/>.
 
-FROM python:2
+FROM alpine:edge
 MAINTAINER Axel Voitier <axel.voitier@gmail.com>
 
-COPY requirements.txt /
-RUN pip install --no-cache-dir -r requirements.txt
+COPY docker_install.sh /
+RUN /docker_install.sh

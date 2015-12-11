@@ -9,6 +9,14 @@ build-python-2:
     script:
         - cd alidron-base-python:2
         - make build
+    
+build-python-2-slim:
+    stage: build
+    tags:
+        - x86
+    script:
+        - cd alidron-base-python:2-slim
+        - make build
         
 deploy-python-2:
     stage: deploy
@@ -16,4 +24,12 @@ deploy-python-2:
         - x86
     script:
         - cd alidron-base-python:2
+        - make push
+        
+deploy-python-2-slim:
+    stage: deploy
+    tags:
+        - x86
+    script:
+        - cd alidron-base-python:2-slim
         - make push

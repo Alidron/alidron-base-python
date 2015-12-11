@@ -1,0 +1,11 @@
+gevent
+# eventlet
+pyzmq
+pebble
+ipaddress
+https://git.tinigrifi.org/alidron/pyre/repository/archive.zip
+https://github.com/aglyzov/netcall/archive/master.zip
+
+pytest
+pytest-cov
+
