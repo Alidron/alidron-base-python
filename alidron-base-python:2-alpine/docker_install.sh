@@ -7,3 +7,5 @@ pip install --no-cache-dir pebble ipaddress
 pip install --no-cache-dir https://git.tinigrifi.org/alidron/pyre/repository/archive.zip
 pip install --no-cache-dir https://github.com/aglyzov/netcall/archive/master.zip
 pip install --no-cache-dir pytest pytest-cov
+
+rm /var/cache/apk/*
