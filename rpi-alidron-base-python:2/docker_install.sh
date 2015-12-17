@@ -15,9 +15,19 @@
 # You should have received a copy of the GNU Lesser General Public License
 # along with Alidron.  If not, see <http://www.gnu.org/licenses/>.
 
-FROM hypriot/rpi-python:2.7.3
-MAINTAINER Axel Voitier <axel.voitier@gmail.com>
+#!/bin/sh
 
-COPY requirements.txt /
-COPY docker_install.sh /
-RUN /docker_install.sh
+buildDeps='
+gcc
+g++
+make
+'
+
+apt-get update
+apt-get install -y --no-install-recommends $buildDeps
+
+pip install --no-cache-dir -r requirements.txt
+
+find /usr/local \( -type d -a -name test -o -name tests \) -o \( -type f -a -name '*.pyc' -o -name '*.pyo' \) -exec rm -rf '{}' +
+apt-get purge -y --auto-remove $buildDeps
+rm -rf /var/lib/apt/lists/*

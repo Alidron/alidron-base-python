@@ -17,6 +17,14 @@ build-python-2-slim:
     script:
         - cd alidron-base-python:2-slim
         - make build
+    
+build-rpi-python-2:
+    stage: build
+    tags:
+        - rpi
+    script:
+        - cd rpi-alidron-base-python:2
+        - make build
         
 deploy-python-2:
     stage: deploy
@@ -32,4 +40,12 @@ deploy-python-2-slim:
         - x86
     script:
         - cd alidron-base-python:2-slim
+        - make push
+        
+deploy-rpi-python-2:
+    stage: deploy
+    tags:
+        - rpi
+    script:
+        - cd rpi-alidron-base-python:2
         - make push
