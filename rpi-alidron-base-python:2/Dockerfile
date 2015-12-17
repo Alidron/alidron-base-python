@@ -18,6 +18,7 @@
 FROM hypriot/rpi-python:2.7.3
 MAINTAINER Axel Voitier <axel.voitier@gmail.com>
 
+WORKDIR /
 COPY requirements.txt /
 COPY docker_install.sh /
 RUN /docker_install.sh
