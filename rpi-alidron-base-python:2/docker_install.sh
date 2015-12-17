@@ -17,6 +17,8 @@
 
 #!/bin/sh
 
+set -e
+
 buildDeps='
 gcc
 g++
