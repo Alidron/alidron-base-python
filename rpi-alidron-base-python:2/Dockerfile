@@ -18,6 +18,7 @@
 FROM hypriot/rpi-python:2.7.3
 MAINTAINER Axel Voitier <axel.voitier@gmail.com>
 
+# RPi python base image has its workdir set to /data, unlike official docker python images
 WORKDIR /
 COPY requirements.txt /
 COPY docker_install.sh /
