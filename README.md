@@ -5,6 +5,8 @@ Alidron base Python
 
 Base Python container images for Alidron.
 
+**>>** Discuss on the [Gitter channel](https://gitter.im/Alidron/talk).
+
 The following flavours of base images are offered:
 * x86, Python 2-slim (from official Docker image python:2-slim, currently used by most children Python images in Alidron): [alidron/alidron-base-python:2-slim](https://hub.docker.com/r/alidron/alidron-base-python/)
 * x86, Python 2 (from official Docker image python:2): [alidron/alidron-base-python:2](https://hub.docker.com/r/alidron/alidron-base-python/)
@@ -16,6 +18,9 @@ Dockerfiles are accessible from the Github repository:
 * x86 Python 2: [Dockerfile](https://github.com/Alidron/alidron-base-python/blob/master/alidron-base-python:2/Dockerfile)
 * x86 Python 2-alpine: [Dockerfile](https://github.com/Alidron/alidron-base-python/blob/master/alidron-base-python:2-alpine/Dockerfile)
 * ARM/Raspberry Pi: [Dockerfile](https://github.com/Alidron/alidron-base-python/blob/master/rpi-alidron-base-python:2/Dockerfile)
+
+
+**WARNING**: It takes 1H+ to build the Raspberry Pi image if you wish to build it yourself.
 
 
 License and contribution policy
