@@ -20,9 +20,6 @@ Dockerfiles are accessible from the Github repository:
 * ARM/Raspberry Pi: [Dockerfile](https://github.com/Alidron/alidron-base-python/blob/master/rpi-alidron-base-python:2/Dockerfile)
 
 
-**WARNING**: It takes 1H+ to build the Raspberry Pi image if you wish to build it yourself.
-
-
 License and contribution policy
 ===============================
 
