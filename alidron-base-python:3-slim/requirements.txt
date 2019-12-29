@@ -1,0 +1,6 @@
+gevent
+pyzmq
+https://github.com/zeromq/pyre/archive/master.zip
+
+pytest
+pytest-cov
