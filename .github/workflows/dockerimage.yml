@@ -24,7 +24,7 @@ jobs:
     
     - name: Push images
       run: |
-        IMAGE_ID=`docker.pkg.github.com/${{ github.repository }}/$IMAGE_NAME | tr '[:upper:]' '[:lower:]'`
+        IMAGE_ID=`echo "docker.pkg.github.com/${{ github.repository }}/$IMAGE_NAME" | tr '[:upper:]' '[:lower:]'`
         VERSION=3-slim
         
         echo IMAGE_ID=$IMAGE_ID
